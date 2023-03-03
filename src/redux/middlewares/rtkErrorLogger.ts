@@ -11,8 +11,8 @@ export const rtkErrorLogger: Middleware =
                 const modal = Modal.error({})
 
                 modal.update({
-                    title: `error ${action.payload.data.errCode}`,
-                    content: `${action.payload.data.errMsg}`
+                    title: `error ${action.payload.data?.errCode}`,
+                    content: `${action?.payload.data?.errMsg}`
                 })
             }
         }

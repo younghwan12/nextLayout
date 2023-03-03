@@ -47,7 +47,7 @@ const BoardTable = () => {
 
     useEffect(() => {
         if (boardList) {
-            setLocalBoardList(boardList.list)
+            setLocalBoardList(boardList)
         }
     }, [boardList])
 
@@ -88,7 +88,7 @@ const BoardTable = () => {
             title: DELETE_CONFIRM_MSG,
             onOk() {
                 delBoard(
-                    rowData?.uid,
+                    rowData?.id,
                 )
             }
 
@@ -117,8 +117,8 @@ const BoardTable = () => {
                 // totalRecords={boardList ? boardList.rspData?.totalElements : 0}
                 >
                     <Column body={bodyTemplate} header="삭제" />
-                    <Column field="param_a" header="글" />
-                    <Column field="param_b" header="작성자" />
+                    <Column field="title" header="글" />
+                    <Column field="author" header="작성자" />
                 </DataTable>
             </Section>
 

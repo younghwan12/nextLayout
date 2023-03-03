@@ -48,14 +48,14 @@ const BoardSearch = () => {
                     <SearchFormBox>
                         <FormItem label="글">
                             <Space>
-                                <FormItem name="writing">
+                                <FormItem name="title">
                                     <Search onSearch={onSearchAppCode} />
                                 </FormItem>
                             </Space>
                         </FormItem>
                         <FormItem label="작성자">
                             <Space>
-                                <FormItem name="writer">
+                                <FormItem name="author">
                                     <Search />
                                 </FormItem>
                             </Space>

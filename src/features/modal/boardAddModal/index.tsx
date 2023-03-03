@@ -55,10 +55,10 @@ const BoardAddModal = ({ visible, setVisible }: IModalProps) => {
         >
             <Form form={form} onFinish={handleFinish}>
                 <SearchForm>
-                    <FormItem label="글" name="param_a">
+                    <FormItem label="제목" name="title">
                         <Input />
                     </FormItem>
-                    <FormItem label="작성자" name="param_b">
+                    <FormItem label="작성자" name="author">
                         <Input />
                     </FormItem>
                 </SearchForm>

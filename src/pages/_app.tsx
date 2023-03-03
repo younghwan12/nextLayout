@@ -20,6 +20,8 @@ import Layout from '../layout/layout';
 import { NextPage } from 'next'
 import { ReactElement, ReactNode } from 'react'
 
+// start npx json-server --watch c:\json-server\db.json --port 4000 -H 172.20.10.2
+
 
 interface InitialProps {
   cookies: unknown;

@@ -14,18 +14,18 @@ const boardApi = appTaggedApi.injectEndpoints({
             ISearchReqList
         >({
             query: (args) => ({
-                url: `/getList?${qs.stringify(args)}`,
+                url: `/board?${qs.stringify(args)}`,
                 method: "GET",
             }),
             providesTags: () => [{ type: "Board" }],
         }),
-
+        //생성
         addboardList: builder.mutation<
             IIQPRes<IPageRes<ISearchResList[]>>,
             ISearchReqList
         >({
             query: (body) => ({
-                url: `/insertList`,
+                url: `/board`,
                 method: "POST",
                 body,
             }),
@@ -37,8 +37,8 @@ const boardApi = appTaggedApi.injectEndpoints({
             ISearchReqList
         >({
             query: (id) => ({
-                url: `/deleteList/${id}`,
-                method: "GET",
+                url: `/board/${id}`,
+                method: "DELETE",
                 // credentials: 'include',
             }),
             invalidatesTags: () => [{ type: "Board" }],
@@ -49,8 +49,8 @@ const boardApi = appTaggedApi.injectEndpoints({
             ISearchReqList
         >({
             query: (body) => ({
-                url: `/updateList`,
-                method: "POST",
+                url: `/board`,
+                method: "PUT",
                 body,
             }),
             invalidatesTags: () => [{ type: "Board" }],
